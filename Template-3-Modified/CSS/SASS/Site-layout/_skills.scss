@@ -1,0 +1,48 @@
+ /* Skills */
+.skills .container .flex .image {
+flex-basis: 40%;
+}
+.skills .container .flex .text {
+ flex-basis: 60%;
+}
+.skills .container .skills-box {
+ margin-bottom: 20px;
+}
+.skills .skills-box .lang {
+ margin-bottom: 20px;
+}
+.skills .skills-box .lang p {
+ padding: 3px;
+ border: 1px solid rgb(223, 223, 223);
+ border-radius: 5px;
+ color: $primary-color;
+ font-size: 13px;
+ font-weight: bold;
+}
+.skills .skills-box .bar {
+ height: 30px;
+}
+.skills .skills-box .bar-1 {
+height: 30px;
+background: linear-gradient(to right, $primary-color 80%, #eee 80%);
+}
+.skills .skills-box .bar-2 {
+height: 30px;
+background: linear-gradient(to right, $primary-color 85%, #eee 85%);
+}
+.skills .skills-box .bar-3 {
+height: 30px;
+background: linear-gradient(to right, $primary-color 70%, #eee 70%);
+}
+.skills .skills-box .bar-4 {
+height: 30px;
+background: linear-gradient(to right, $primary-color 80%, #eee 80%);
+}
+@media (max-width: 991px) {
+ .skills .container .flex .text {
+  flex-basis: 100%;
+ }
+ .skills .hidden-sm {
+  display: none;
+ }
+}

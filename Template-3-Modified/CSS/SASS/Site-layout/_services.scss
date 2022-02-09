@@ -1,0 +1,87 @@
+/* Services */
+.services {
+ background-color: #eee;
+}
+.services .services-box {
+ position: relative;
+ background-color: #fff;
+ text-align: center;
+ counter-increment: pages;
+ transition: 0.5s transform;
+}
+.services .services-box:hover {
+transform: translateY(-10px);
+}
+.services .services-box::before {
+content: "";
+position: absolute;
+width:0;
+height: 3px;
+background-color: $primary-color;
+top: 0;
+left: 50%;
+transition: 500ms;
+transform-origin: center center;
+}
+.services .services-box::after {
+content: "";
+position: absolute;
+width:0;
+height: 3px;
+background-color: $primary-color;
+top: 0;
+right: 50%;
+transition: 500ms;
+transform-origin: center center;
+}
+.services .services-box:hover::before {
+ width: 50%;
+}
+.services .services-box:hover::after {
+width: 50%;
+}
+.services .services-box .flex {
+ background-color: rgb(246, 246, 246);
+}
+.services .services-box i {
+ color: rgb(202, 202, 202);
+ font-size: 65px;
+ margin-top: 30px;
+ margin-bottom: 25px;
+}
+.services .services-box h3 {
+ color: $primary-color;
+ font-size: 25px;
+ margin-bottom: 35px;
+}
+.services .services-box .counter {
+ position: relative;
+width: 150px;
+height: 50px;
+background-color: rgb(202, 202, 202);
+clip-path:polygon(0 0, 100% 0, 75% 100%, 0 100%);
+}
+.services .services-box .counter::before {
+content: "";
+position: absolute;
+width: 60%;
+height: 100%;
+background-color:$primary-color;
+top: 0;
+left: 0;
+clip-path:polygon(0 0, 100% 0, 60% 100%, 0 100%);
+}
+.services .services-box .counter::after {
+ content:"0" counter(pages);
+ position: absolute;
+ top: 20%;
+ left: 10%;
+ font-size: 30px;
+ font-weight: bold;
+ color: #fff;
+}
+.services .services-box a {
+ text-decoration: none;
+ margin-right: 20px;
+ color: $primary-color;
+}

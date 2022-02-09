@@ -1,0 +1,60 @@
+/* Top videos */
+.videos .container .flex {
+ align-items: flex-start
+}
+.videos .container .flex .video-text {
+ border: 1px solid rgb(228, 228, 228);
+ flex-basis: 30%;
+}
+.videos .container .flex .right{
+ flex-basis: 70%;
+}
+.videos .video-text div {
+ padding: 20px;
+ padding-right: 0;
+ border-top: 1px solid rgb(228, 228, 228);
+}
+.videos .video-text div:hover a:first-of-type {
+ color: $primary-color;
+}
+.videos .video-text .top {
+ background-color: #eee;
+ font-size: 15px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+}
+.videos .video-text .top i {
+ margin-right: 20px;
+}
+.videos .video-text div a {
+ display: block;
+ text-decoration: none;
+}
+.videos .video-text div a:first-of-type {
+ color: $secondary-color;
+ margin-bottom: 10px;
+}
+.videos .video-text div a:nth-of-type(2) {
+ color: $paragraph-color;
+}
+.videos .container .flex .right {
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between;
+ background-color: rgb(218, 218, 218);
+ padding: 10px;
+ height: 677px;
+}
+.videos .container .flex .right .bottom{
+ background-color: #fff;
+ padding: 15px;
+}
+@media (max-width: 991px) {
+ .videos .container .flex {
+  flex-direction: column;
+ }
+ .videos .container .flex .video-text {
+  width: 100%;
+ }
+}

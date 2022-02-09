@@ -1,0 +1,84 @@
+/* Team Members */
+.team {
+ position: relative;
+}
+.team::before {
+content: "";
+position: absolute;
+width: 100%;
+height: 15px;
+bottom: 0;
+background: linear-gradient(-45deg, transparent 33.33%, #eee 33.33%, #eee 66.66%, transparent 66.66%), linear-gradient(45deg, transparent 33.33%, #eee 33.33%, #eee 66.66%, transparent 66.66%);
+background-size: 30px 60px;
+}
+.team .grid {
+ margin-top: 140px;
+ grid-column-gap: 25px;
+ grid-row-gap: 85px;
+}
+.team .team-box {
+ position: relative;
+}
+.team .team-box::before {
+ content: "";
+ position: absolute;
+ width: 80%;
+ height: 115%;
+ top: -50px;
+ right: 0;
+ background-color: #eee;
+ z-index:-2;
+ border-radius: 10px;
+}
+.team .team-box::after {
+content: "";
+position: absolute;
+width: 0;
+height: 115%;
+top: -50px;
+right: 0;
+background-color: rgb(185, 185, 185, 0.5);
+z-index: -1;
+border-radius: 10px;
+transition: 250ms linear;
+}
+.team .team-box:hover::after {
+width: 80%;
+}
+.team .team-box:hover .image {
+filter: grayscale(100%);
+}
+.team .team-box:hover h3 {
+color: $secondary-color;
+}
+.team .team-box .flex .image {
+ border-radius: 10px;
+ flex-basis: 80%;
+}
+.team .team-box .flex .image img {
+ border-radius: 10px;
+}
+.team .team-box .flex div {
+ flex-basis: 20%;
+ text-align: center;
+}
+.team .team-box .flex div i {
+ display: block;
+ margin-bottom: 30px;
+ color: $paragraph-color;
+ font-size: 15px;
+}
+.team .team-box .flex div i:hover {
+ color: $primary-color;
+}
+.team .team-box h3 {
+ color: $primary-color;
+ margin-left: 25%;
+ margin-top: 10px;
+}
+.team .team-box p {
+ color: $secondary-color;
+ margin-left: 25%;
+ margin-top: 10px;
+ margin-bottom: 10px;
+}

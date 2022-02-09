@@ -1,0 +1,94 @@
+/* Articles */
+.articles {
+ position: relative;
+}
+.articles::before {
+ content: "";
+ position: absolute;
+ width: 100%;
+ height: 15px;
+ bottom: 0;
+ background: linear-gradient(-45deg, transparent 33.33%, #eee 33.33%, #eee 66.66%, transparent 66.66%), linear-gradient(45deg, transparent 33.33%, #eee 33.33%, #eee 66.66%, transparent 66.66%);
+ background-size: 30px 60px;
+}
+.articles .articles-box {
+ border-radius: 10px;
+ position: relative;
+ transition: 500ms transform;
+}
+.articles .articles-box .image img{
+ border-top-left-radius: 10px;
+ border-top-right-radius: 10px;
+}
+.articles .articles-box .text {
+ padding: 20px;
+ position: relative;
+}
+.articles .articles-box .text h3 {
+ color:$heading-color;
+font-size: 20px;
+}
+.articles .articles-box .text p {
+ color: $paragraph-color;
+ margin-top: 8px;
+ line-height: 1.5;
+ font-size: 15px;
+}
+.articles .articles-box .text hr {
+ position: absolute;
+ left: 0;
+ bottom: 60px;
+ width: 100%;
+ height: 1px;
+ background-color: #eee;
+}
+.articles .articles-box .text a {
+ display: block;
+ text-decoration: none;
+ color: $primary-color;
+ font-weight: bold;
+ margin-top: 40px;
+}
+.articles .articles-box::before {
+ content: "";
+ position: absolute;
+ width: 12px;
+ height: 2px;
+ background-color: $primary-color;
+ bottom: 30px;
+ right: 40px;
+ animation: move-1 500ms linear infinite;
+ animation-play-state: paused;
+}
+.articles .articles-box::after {
+ content: "";
+ position: absolute;
+ width: 0;
+ height: 0;
+ border: 3px solid;
+ border-color: $primary-color $primary-color transparent transparent;
+ bottom: 28px;
+ right: 40px;
+ transform: rotate(45deg);
+ animation: move 500ms linear infinite;
+ animation-play-state: paused;
+}
+@keyframes move {
+  100% {
+    transform: translateX(10px) rotate(45deg);
+  }
+}
+@keyframes move-1 {
+  100% {
+    transform: translateX(10px);
+  }
+}
+.articles .articles-box:hover {
+ transform: translateY(-10px);
+}
+.articles .articles-box:hover::before {
+ animation-play-state: running;
+}
+.articles .articles-box:hover::after {
+ animation-play-state: running;
+}

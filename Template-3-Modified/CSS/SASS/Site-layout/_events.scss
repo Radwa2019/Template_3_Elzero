@@ -1,0 +1,158 @@
+/* Events */
+.events {
+ position: relative;
+}
+.events::before {
+ content: "";
+ position: absolute;
+ width: 204px;
+ height: 186px;
+ background-image: url(../images/dots.png);
+ right: 0;
+ top: 186px;
+ z-index: -1;
+}
+.events::after {
+ content: "";
+ position: absolute;
+ width: 204px;
+ height: 186px;
+ background-image: url(../images/dots.png);
+ left: 0;
+ bottom: 250px;
+ z-index: -1;
+}
+.events .container > .flex {
+  justify-content: flex-start;
+}
+.events .container .flex .image {
+flex-basis: 40%;
+}
+.events .container .flex .text {
+flex-basis: 50%;
+text-align: center;
+}
+.events .container .flex .text .flex-time {
+  display: flex;
+  justify-content: center;
+}
+
+.events .flex .text .flex-time .events-box {
+  width: 70px;
+  text-align: center;
+border: 1px solid rgb(212, 212, 212);
+border-radius: 10px;
+margin-right: 10px;
+}
+.events .flex .text .flex-time .events-box h3 {
+color: $primary-color;
+font-size: 30px;
+padding: 10px;
+border-bottom: 1px solid rgb(212, 212, 212);
+}
+.events .flex .text .flex-time .events-box p {
+font-size: 13px;
+padding: 10px;
+text-align: center;
+}
+.events .flex .text> h3 {
+font-size: 25px;
+margin-top: 30px;
+margin-bottom: 30px;
+}
+.events .flex .text > p {
+color: $paragraph-color;
+line-height: 1.7;
+font-size: 18px;
+}
+.events .container .email {
+margin: 0 auto;
+margin-bottom: 50px;
+margin-top: 50px;
+width: 60%;
+height: 120px;
+background-color: #eee;
+border-radius: 50px;
+}
+.events .container .email.flex {
+  justify-content: space-between;
+}
+.events .email input {
+flex-basis: 60%;
+padding: 20px;
+margin-left: 5%;
+border-radius: 40px;
+outline: none;
+}
+.events .email button {
+flex-basis: 25%;
+background-color: $primary-color;
+padding: 20px;
+border-radius: 40px;
+margin-right: 5%;
+}
+.events .email button a {
+text-decoration: none;
+color: #fff;
+font-weight: bold;
+}
+.events .email button:hover {
+filter: grayscale(10%);
+}
+@media (max-width: 767px) {
+  .events::before {
+   display: none;
+ }
+ .events::after {
+   display: none;
+ }
+ .events .hidden-sm {
+   display: none;
+  }
+  .events .container .flex {
+    justify-content: center;
+  }
+  .events .container .flex .text {
+   flex-basis: 95%;
+   text-align: center;
+   }
+   .events .flex .text > p {
+     font-size: 15px;
+   }
+   .events .container .email {
+    width: 90%;
+    height: 200px;
+    flex-direction: column;
+    border-radius: 0;
+    padding: 20px;
+  }
+  .events .email input {
+    width: 100%;
+    flex-basis: 40%;
+    padding: 5px;
+    border-radius: 0;
+    margin: auto;
+    text-align: center;
+  }
+  .events .email button {
+  width: 100%;
+  margin: auto;
+    padding: 20px;
+    border-radius: 0;
+  }
+  }
+@media (min-width: 768px) and (max-width: 991px) {
+ .events .hidden-sm {
+  display: none;
+ }
+ .events .container .flex {
+  justify-content: center;
+}
+ .events .container .flex .text {
+  flex-basis: 95%;
+  text-align: center;
+  }
+.events .container .email {
+  width: 70%;
+}
+}

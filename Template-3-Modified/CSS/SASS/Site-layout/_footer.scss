@@ -1,0 +1,102 @@
+/* Footer */
+footer {
+ background-color: #000;
+ padding-top: 70px;
+}
+footer .grid {
+ grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+}
+footer .footer-box {
+ color: rgba(238, 238, 238, 0.5);
+ margin-bottom: 50px;
+}
+footer .box-1 h2 {
+ color:  rgba(238, 238, 238, 1);
+ font-size: 40px;
+ margin-bottom: 20px;
+} 
+footer .box-1 i {
+ display: inline-block;
+ background-color: rgba(128, 128, 128, 0.5);
+ font-size: 20px;
+ text-align: center;
+ padding: 10px;
+ padding-top: 15px;
+ width: 50px;
+ height: 50px;
+ margin-right: 10px;
+ margin-bottom: 20px;
+ transition: 0.5s background-color;
+}
+footer .box-1 i.facebook:hover {
+ background-color: rgba(0, 110, 255, 0.959);
+}
+footer .box-1 i.twitter:hover {
+ background-color: rgba(0, 174, 255, 0.959);
+}
+footer .box-1 i.youtube:hover {
+ background-color: rgba(255, 0, 0, 0.959);
+}
+footer .box-1 p {
+ line-height: 2;
+ color: #a3a3a3;
+}
+footer .box-2 div {
+ padding: 15px;
+ border-bottom: 0.3px solid rgba(73, 73, 73, 0.5);
+ position: relative;
+ transition: 0.5s padding-left;
+}
+footer .box-2 div:hover {
+ padding-left: 25px;
+}
+footer .box-2 div i{
+ color: $primary-color;
+}
+footer .box-2 div a {
+ color:  rgba(238, 238, 238, 0.5);
+ text-decoration: none;
+ margin-left: 5px;
+}
+footer .box-3 div {
+ display: flex;
+ align-items: center;
+ margin-bottom: 10px;
+}
+footer .box-3 div span {
+ display: inline-block;
+ margin-right: 10px;
+ line-height: 1.7;
+}
+footer .box-3 div .close {
+display: flex;
+flex-direction: column;
+}
+footer .box-3 div span i {
+ color: $primary-color;
+}
+.footer-box.box-4 {
+ display: grid;
+ grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+ place-content: center;
+ grid-gap: 10px;
+}
+footer .box-4 .box-2 {
+ border: 3px solid #fff;
+ background-color: #fff;
+}
+footer .signature {
+ border-top: 1px solid rgba(73, 73, 73, 0.5);
+ color: rgba(238, 238, 238, 1);
+ padding: 20px;
+ text-align: center;
+ margin: 0 auto;
+}
+@media (max-width: 767px) {
+ .footer-box {
+  text-align: center;
+ }
+ footer .box-3 div {
+  flex-direction: column;
+ }
+}

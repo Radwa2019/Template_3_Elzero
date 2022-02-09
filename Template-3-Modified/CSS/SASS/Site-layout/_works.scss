@@ -1,0 +1,66 @@
+/* How It Works
+ */
+ .how {
+  background-color: #eee;
+}
+.how .flex >.text {
+  flex-basis: 50%;
+}
+.how .work-box {
+  background-color: #fff;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  padding: 30px;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  background-color: rgb(247, 247, 247);
+  position: relative;
+}
+.how .work-box::before {
+ position: absolute;
+ content: "";
+ width: 100%;
+ height: 100%;
+ top:0;
+ left: 0;
+ transform: scale(0);
+ transform-origin: center;
+ background-color:rgba(224, 224, 224, 0.3);
+ z-index: 1;
+ transition: 0.3s transform;
+}
+.how .work-box:hover::before {
+ transform: scale(1);
+ transform-origin: center;
+}
+.how .work-box .image {
+  width: 70px;
+  height: 70px;
+}
+.how .work-box .text {
+  flex-basis: calc(100% - 100px);
+}
+.how .work-box .text h3 {
+  margin-bottom: 10px;
+}
+.how .work-box .text p {
+  line-height: 1.5;
+  font-size: 18px;
+  color: $paragraph-color;
+}
+@media (max-width: 991px) {
+  .how .container > .flex {
+    flex-direction:column ;
+  }
+}
+@media (max-width: 767px) {
+  .how .container .flex {
+    flex-direction:column ;
+  }
+  .how .work-box {
+    text-align: center;
+  }
+  .how .work-box .text h3 {
+    margin-top: 20px;
+  }
+}
